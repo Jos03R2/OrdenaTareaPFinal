@@ -1,0 +1,257 @@
+{
+  "info": {
+    "name": "OrdenaTareasAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Usuario",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Juan P\\u00e9rez\", \"correo\": \"juan@ejemplo.com\", \"contrasena\": \"123456\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/usuarios",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar Usuarios",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/usuarios",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Usuario por ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/usuarios/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Eliminar Usuario por ID",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/usuarios/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear Tarea",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"titulo\": \"Tarea con historial\", \"descripcion\": \"Prueba Postman\", \"prioridad\": \"ALTA\", \"estado\": \"PENDIENTE\", \"usuario\": {\"id\": 1}}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/tarea",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "tarea"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Agregar tarea a cola",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"titulo\": \"Tarea en cola\", \"descripcion\": \"Desde Postman\", \"usuario\": {\"id\": 1}}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/cola/agregar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "cola",
+            "agregar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener siguiente tarea en cola",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/cola/obtener",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "cola",
+            "obtener"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ver si la cola est\u00e1 vac\u00eda",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/cola/vacia",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "cola",
+            "vacia"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ver primera tarea en cola",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/cola/ver",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "cola",
+            "ver"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar tareas en cola",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/cola/listar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "cola",
+            "listar"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Agregar historial manual",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/historial/usuario/1?descripcion=Tarea completada",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "historial",
+            "usuario",
+            "1"
+          ],
+          "query": [
+            {
+              "key": "descripcion",
+              "value": "Tarea completada"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar historial",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/historial",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "historial"
+          ]
+        }
+      }
+    }
+  ]
+}
