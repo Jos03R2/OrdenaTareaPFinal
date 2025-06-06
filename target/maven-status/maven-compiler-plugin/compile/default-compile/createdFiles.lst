@@ -1,0 +1,14 @@
+miumg\edu\gt\ordenatareas\service\HistorialService.class
+miumg\edu\gt\ordenatareas\controller\TareaController.class
+miumg\edu\gt\ordenatareas\controller\ColaController.class
+miumg\edu\gt\ordenatareas\controller\TestController.class
+miumg\edu\gt\ordenatareas\controller\TareaColaController.class
+miumg\edu\gt\ordenatareas\controller\HistorialController.class
+miumg\edu\gt\ordenatareas\producer\ColaProducer.class
+miumg\edu\gt\ordenatareas\config\RabbitConfig.class
+miumg\edu\gt\ordenatareas\OrdenaTareasApplication.class
+miumg\edu\gt\ordenatareas\service\TareaColaServicio.class
+miumg\edu\gt\ordenatareas\service\TareaService.class
+miumg\edu\gt\ordenatareas\service\UsuarioService.class
+miumg\edu\gt\ordenatareas\controller\UsuarioController.class
+miumg\edu\gt\ordenatareas\consumer\ColaConsumer.class
